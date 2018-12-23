@@ -1,13 +1,12 @@
 # Note - using our local msf image as base - need to update this once we publish!
-FROM msf
+FROM msf-minimal
     
 RUN apt-get -y update && \
     apt-get install -y \
         xvfb \
         git \
         sudo \
-        python-pip && \
-    pip install python-dotenv && \
+        python && \
     cd /opt/ && \
     git clone --depth=1 https://github.com/Veil-Framework/Veil /opt/Veil && \
     cd /opt/Veil/config/ && \
@@ -20,8 +19,7 @@ RUN apt-get -y update && \
     # Cleanup
     rm -rf /opt/Veil/.git && \
     apt-get remove -y \
-        xvfb \
-        python-pip && \
+        xvfb && \
     apt-get autoremove -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*r
