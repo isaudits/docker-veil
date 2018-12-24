@@ -11,11 +11,11 @@ Warning - this thing is BIG! Image size tops out at around 4 GB once built...
 
 
 ## Usage
-Build:
+Pull:
 
-    docker build -t veil .
-    
-or
+    docker pull isaudits/veil
+
+or Build:
 
     ./build.sh
     
