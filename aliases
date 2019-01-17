@@ -1,0 +1,15 @@
+###############################################################################
+#
+# Source this in .bash_profile and have veil commands on your console...
+#
+# Note - cannot use same variable name if using this technique to alias multiple files;
+# Variable goes into path!
+#
+###############################################################################
+
+veil_command='docker run -it --rm isaudits/veil'
+
+alias veil='$veil_command ./Veil.py $@'
+
+
+
