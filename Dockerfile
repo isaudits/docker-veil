@@ -1,5 +1,4 @@
-# Note - using our local msf image as base - need to update this once we publish!
-FROM isaudits/msf-minimal
+FROM isaudits/msf:minimal
     
 RUN apt-get -y update && \
     apt-get install -y \
