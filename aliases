@@ -7,7 +7,7 @@
 #
 ###############################################################################
 
-veil_command='docker run -it --rm isaudits/veil'
+veil_command='docker run -it --rm '$HOME'/.veil:/var/lib/veil/output isaudits/veil'
 
 alias veil='$veil_command ./Veil.py $@'
 
