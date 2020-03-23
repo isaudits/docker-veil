@@ -9,7 +9,7 @@
 
 veil_command='docker run -it --rm -v '$HOME'/.veil:/var/lib/veil/output isaudits/veil'
 
-alias veil='$veil_command ./Veil.py $@'
+alias veil="$veil_command ./Veil.py $@"
 
 
 
